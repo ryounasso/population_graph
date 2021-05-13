@@ -3,16 +3,18 @@ import axios from "axios";
 
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 export const Top = () => {
+  let prefectureInfomation;
   useEffect(() => {
     axios
       .get("https://opendata.resas-portal.go.jp/api/v1/prefectures", {
         headers: { "X-API-KEY": apiKey },
       })
       .then((res) => {
-        console.log(apiKey);
-        console.log(res);
+        prefectureInfomation = res;
+        console.log(prefectureInfomation.data.result);
       });
   }, []);
+
   return (
     <>
       <p>Top</p>
