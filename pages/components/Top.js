@@ -11,7 +11,7 @@ export const Top = () => {
       })
       .then((res) => {
         prefectureInfomation = res;
-        console.log(prefectureInfomation.data.result);
+        console.log(prefectureInfomation.data.result[0]);
       });
   }, []);
 
@@ -21,6 +21,7 @@ export const Top = () => {
       <div>
         <label>
           <input type="checkbox" />
+          {/* {prefectureInfomation[0].prefName} */}
           北海道
         </label>
       </div>
