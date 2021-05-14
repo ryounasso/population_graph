@@ -4,11 +4,8 @@ import CheckBox from "./CheckBox";
 
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 const Top = () => {
-  const [prefectureInfomation, setData] = useState({ hits: [] });
   const [isLoading, setIsLoading] = useState(false);
-  const checkboxs = prefectureInfomation.map((prefectureInfomations) => (
-    <CheckBox value={prefectureInfomations.prefName} />
-  ));
+  const [checkboxs, setCheckboxs] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -17,8 +14,12 @@ const Top = () => {
         headers: { "X-API-KEY": apiKey },
       })
       .then((res) => {
-        setData(res.data.result);
         setIsLoading(false);
+        setCheckboxs(
+          res.data.result.map((prefectureInfomations) => (
+            <CheckBox value={prefectureInfomations.prefName} />
+          ))
+        );
       });
   }, []);
 
