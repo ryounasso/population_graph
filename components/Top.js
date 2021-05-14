@@ -7,7 +7,6 @@ const Top = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [checkboxs, setCheckboxs] = useState();
 
-  console.log(apiKey);
   useEffect(() => {
     setIsLoading(true);
     axios
