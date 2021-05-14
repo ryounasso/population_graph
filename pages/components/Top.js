@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-export const Top = () => {
+const Top = () => {
   let prefectureInfomation;
   useEffect(() => {
     axios
@@ -28,3 +28,5 @@ export const Top = () => {
     </>
   );
 };
+
+export default Top;
