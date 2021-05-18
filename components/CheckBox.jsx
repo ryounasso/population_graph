@@ -9,6 +9,7 @@ const CheckBox = (props) => {
   return (
     <label>
       <input
+        className="checkbox"
         type="checkbox"
         onChange={() => getPopulationCodeData(prefectureInfomation)}
       />

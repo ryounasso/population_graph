@@ -1,5 +1,31 @@
-.checkbox {
+.checkbox-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-basis: 100%;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.checkbox {
+  flex-shrink: 1;
+  min-width: 0;
+  margin-left: 10px;
+}
+
+.a {
+  max-width: 100%;
+}
+
+.chart {
+  max-width: 100%;
+}
+
+.header {
+  font-size: 2rem;
+  color: white;
+  padding-top: 8px;
+  background-color: gray;
+  width: 100%;
+  text-align: center;
 }

@@ -86,7 +86,7 @@ const Top = () => {
         {isLoading ? (
           <div>Loading...</div>
         ) : (
-          <div className="checkbox">{checkboxs}</div>
+          <div className="checkbox-container">{checkboxs}</div>
         )}
       </div>
       {chart}

@@ -19,7 +19,13 @@ export const Sample = (props) => {
     series: recieveDatas,
   };
 
-  return <HighchartsReact highcharts={Highcharts} options={options} />;
+  return (
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={options}
+      className="chart"
+    />
+  );
 };
 
 export default Sample;
